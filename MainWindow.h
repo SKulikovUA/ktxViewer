@@ -19,5 +19,6 @@ private:
 
 private:
     QScopedPointer<QAction> mFileOpenAction;
+    QScopedPointer<QAction> mFileExitAction;
 };
 #endif // MAINWINDOW_H

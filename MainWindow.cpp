@@ -16,6 +16,14 @@ MainWindow::MainWindow(QWidget *parent)
          qDebug() << "Clicked";
       }
       );
+      fileMenu->addSeparator();
+      mFileExitAction.reset(new QAction("Exit", this));
+      fileMenu->addAction(mFileExitAction.get());
+      connect(mFileExitAction.get(), &QAction::triggered, this, []()
+      {
+         QApplication::quit();
+      }
+      );
    }
 
    setGeometry(100, 100, WIN_WIDTH, WIN_HEIGHT);
